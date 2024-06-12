@@ -7,7 +7,7 @@ import scipy.stats as stats
 def statistical_analysis(df,b,c,d,e,f,g):
     correlation_matrix = df.corr()
 
-    a_dict = {"Category":['floor_area_sqm', 'resale_price'],
+    a_dict = {"Category":['floor_area_sqm', 'resale_price','lease_commence_date','trans_year','years_remaining'],
               "Min":b,"Max":c,"Mean":d,"Median":e,"Mode":f,"Standard Deviation":g}
 
     df1 = pd.DataFrame(a_dict)
