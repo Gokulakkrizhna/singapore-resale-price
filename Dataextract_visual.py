@@ -263,11 +263,5 @@ def streamlit():
         fig = px.bar(df2, x="town", y="resale_price", color="flat_type")
         st.plotly_chart(fig, use_container_width=True)
 
-        st.subheader(":red[Exploring Resale Price Trends Over storey range]")
-        df2 = df1.groupby(["storey_range"])[["resale_price"]].sum().reset_index()
-        fig = px.pie(df2, values='resale_price', names='storey_range',
-                    hole=0.4, labels={'resale_price': 'Total Resale Price', 'storey_range': 'Storey Range'})
-        st.plotly_chart(fig, use_container_width=True)
-
 
 streamlit()
