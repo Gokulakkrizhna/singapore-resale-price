@@ -269,10 +269,5 @@ def streamlit():
                     hole=0.4, labels={'resale_price': 'Total Resale Price', 'storey_range': 'Storey Range'})
         st.plotly_chart(fig, use_container_width=True)
 
-        st.subheader(":red[Exploring Resale Price Trends Over different flat model]")
-        fig = px.box(df1, x="flat_model", y="resale_price",
-             labels={"resale_price": "Resale Price", "flat_model": "Flat Model"})
-        st.plotly_chart(fig, use_container_width=True)
-
 
 streamlit()
