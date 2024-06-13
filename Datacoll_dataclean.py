@@ -128,6 +128,8 @@ def data_cleaning(df):
     
     v1,v2,v3,v4,v5,v6,v7,v8,v9 = data_extract(df)
 
+    df1 = df
+
     encoder = ce.OrdinalEncoder(cols=[ 'town', 'flat_type','block','street_name','storey_range','flat_model','lease_commence_date','trans_year','years_remaining'])
     df = encoder.fit_transform(df)
 
@@ -135,8 +137,8 @@ def data_cleaning(df):
 
     df["resale_price"] = np.log10(df["resale_price"])
 
-    return df,df_min,df_max,df_mean,df_median,df_mode,df_stddev,v1,v2,v3,v4,v5,v6,v7,v8,v9,V1,V2,V3,V4,V5,V6,V7,V8,V9
+    return df,df_min,df_max,df_mean,df_median,df_mode,df_stddev,v1,v2,v3,v4,v5,v6,v7,v8,v9,V1,V2,V3,V4,V5,V6,V7,V8,V9,df1
 
 
 a = data_collection()
-a,b,c,d,e,f,g,v1,v2,v3,v4,v5,v6,v7,v8,v9,V1,V2,V3,V4,V5,V6,V7,V8,V9 = data_cleaning(a)
+a,b,c,d,e,f,g,v1,v2,v3,v4,v5,v6,v7,v8,v9,V1,V2,V3,V4,V5,V6,V7,V8,V9,df1 = data_cleaning(a)
