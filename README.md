@@ -88,7 +88,8 @@ df5 = pd.read_csv('please provide the file name here')
 df6 = pd.read_csv('please provide the file name here')
 ```
 - ```analysis``` file is responsible for exploratory data analysis (EDA) and extracting valuable insights.
-- ```Dataextract_visual``` file is used to display the predicted data from ML model and display over the streamlit dashboard.
+- ```Dataextract_visual``` file is the complete analysis which is used to display the predicted data from ML model and display statistical, EDA and Vissual insights over the streamlit dashboard.
+- ```Dataextract_visual_render``` file used to deploy the predicted ML alone in the Render platform.
 - Four separate tabs have been implemented in the Streamlit web application to facilitate user interaction and enhance data visualization for insightful analysis.
 ```bash
 tab1, tab2, tab3, tab4= st.tabs(["Home", "Statistical Insights","EDA Insights","Visual Insights"])
