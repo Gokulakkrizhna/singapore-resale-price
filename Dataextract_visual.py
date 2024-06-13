@@ -12,7 +12,7 @@ import os
     
 
 def streamlit():
-    tab1, tab2, tab3, tab4= st.tabs(["Home", "Statistical Insights","EDA Insights","Visual Insights"])
+    tab1, tab2, tab3 = st.tabs(["Home", "Statistical Insights","EDA Insights"])
     with tab1:
         st.markdown('<h1 style="text-align: center; color: red;">Singapore Resale Flat Prices</h1>', unsafe_allow_html=True)
         col1, col2 = st.columns(2)
@@ -236,32 +236,6 @@ def streamlit():
             - Independent
             - From this we can conclude that there is no connection over number of years remaining in the lease period and their resale prices. It is a strong evidence.           
             """)
-
-    with tab4:
-        st.subheader(":red[Exploring Resale Price Trends Over Transaction years]")
-        df2 = df1.groupby(["trans_year"])[["resale_price"]].sum().reset_index()
-        fig = px.line(df2, x="trans_year", y="resale_price")
-        st.plotly_chart(fig, use_container_width=True)
-
-        st.subheader(":red[Exploring Resale Price Trends Over remaining Lease years]")
-        df2 = df1.groupby(["years_remaining"])[["resale_price"]].sum().reset_index()
-        fig = px.scatter(df2, x="years_remaining", y="resale_price")
-        st.plotly_chart(fig, use_container_width=True)
-
-        st.subheader(":red[Exploring Resale Price Trends Over lease commence Years]")
-        df2 = df1.groupby(["lease_commence_date"])[["resale_price"]].sum().reset_index()
-        fig = px.bar(df2, x="lease_commence_date", y="resale_price")
-        st.plotly_chart(fig, use_container_width=True)
-
-        st.subheader(":red[Exploring Resale Price Trends Over town]")
-        df2 = df1.groupby(["town"])[["resale_price"]].sum().reset_index()
-        fig = px.pie(df2, values='resale_price', names='town')
-        st.plotly_chart(fig, use_container_width=True)
-
-        st.subheader(":red[Exploring Resale Price Trends Over town and flats type]")
-        df2 = df1.groupby(["town", "flat_type"])[["resale_price"]].sum().reset_index()
-        fig = px.bar(df2, x="town", y="resale_price", color="flat_type")
-        st.plotly_chart(fig, use_container_width=True)
 
 
 streamlit()
