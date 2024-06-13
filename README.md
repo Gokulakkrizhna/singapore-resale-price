@@ -37,6 +37,9 @@ To use this project, Please follow the below steps.
 - To perform EDA analysis:```python statistical_eda_analysis.py```
 - Run the Streamlit app: ```streamlit run Dataextract_visual.py```
 - Access the app in your browser at ```http://localhost:8501```
+
+Data Source : (https://beta.data.gov.sg/collections/189/view)
+
 # Features
 - Fetch Singapore Resale data from Excel file
 - Data Cleaning and pre-processing
