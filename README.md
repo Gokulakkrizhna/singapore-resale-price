@@ -2,8 +2,6 @@
 ## Overview
 This project allows users to explore Singapore flat resale prices. After retrieving and cleaning the data, insights are gained through exploratory data analysis (EDA). Various regression models are then used to predict resale prices, and the final model is deployed on a user-friendly Render platform.
 
-Render - (https://singapore-resale-price-vz5x.onrender.com)
-
 ## Table of Contents
 - [Key Technologies and Skills](#key-technologies-and-skills)
 - [Installation](#installation)
