@@ -40,7 +40,7 @@ def streamlit():
         yrs_rm = V9[y1]
     
     if st.button("Predict Resale Price"):
-            with open('lr.pkl', 'rb') as file:
+            with open('ar.pkl', 'rb') as file:
                 model = pickle.load(file)
             
             y_pred = model.predict([[town,flat_ty,block,street,storey,floor,flat_ml,lease,trans_yr,yrs_rm]])
